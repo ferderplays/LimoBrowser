@@ -1,9 +1,8 @@
 package com.LimoB.innit;
 
 import javax.swing.*;
-
 import com.LimoB.util.folders.BrowserFolderUtil;
-
+import com.LimoB.util.folders.StorageFolderUtil;
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.scene.Scene;
@@ -31,6 +30,7 @@ public class Frame extends JFrame implements Runnable {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Frame());
         BrowserFolderUtil.create();
+        StorageFolderUtil.create();
     }
 
 }
