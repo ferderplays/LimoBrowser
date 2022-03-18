@@ -8,5 +8,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="C:/Users/42060/AppData/Roaming/.minecraft/libraries/org/json/json/20190722/json-20190722.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JavaFX"/>
+	<classpathentry kind="lib" path="C:/Users/42060/Downloads/jsoup-1.14.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

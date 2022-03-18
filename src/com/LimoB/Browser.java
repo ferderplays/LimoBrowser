@@ -8,4 +8,8 @@ public class Browser {
 	 * -> It has a ton of customization, and useful features
 	 */
 
+	/**
+	 * Yes i am going to rewrite it a few times.
+	 */
+
 }
