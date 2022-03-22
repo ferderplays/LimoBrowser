@@ -4,6 +4,13 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
+import javafx.embed.swing.JFXPanel;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+
 public class BrowserTab {
 
     private JTextField urlfield;
@@ -16,11 +23,12 @@ public class BrowserTab {
 
             public void actionPerformed(java.awt.event.ActionEvent e) {
                 // TODO Auto-generated method stub
-                System.out.println("Limo Browser test v1.0.0");
+
             }
 
         });
         JPanel tab = new JPanel();
+        tab.add(urlfield);
         tab.add(label);
         tab.add(button);
         tab.setBackground(java.awt.Color.BLACK);

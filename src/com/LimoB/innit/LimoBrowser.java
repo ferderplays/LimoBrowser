@@ -22,6 +22,8 @@ public class LimoBrowser {
     private JTabbedPane tabs;
     private JPanel panel1;
     private JPanel panel2;
+    private JButton button;
+    private JPanel panel;
 
     public LimoBrowser(String title) {
         frame = new JFrame();
@@ -32,17 +34,25 @@ public class LimoBrowser {
         panel1 = new BrowserTab().innitTab();
         panel2 = new JPanel();
 
+        button = new JButton();
+
         tabs = new JTabbedPane();
-        tabs.add(panel1);
-        tabs.add(panel2);
+        tabs.addTab("Tab 1", panel1);
+        tabs.addTab("Tab 2", panel2);
+        tabs.addTab("+", button);
+        button.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                // TODO Auto-generated method stub
+                panel = new BrowserTab().innitTab();
+                tabs.addTab("New Tab", panel);
+            }
+
+        });
         tabs.setBackground(Color.BLACK);
         tabs.setBorder(BorderFactory.createEmptyBorder());
 
         frame.add(tabs);
-    }
-
-    public void loadPage(String url) {
-
     }
 
     public static void main(String[] args) {
