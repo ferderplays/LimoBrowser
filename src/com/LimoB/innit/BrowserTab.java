@@ -18,24 +18,15 @@ public class BrowserTab {
 
     private JTextField urlfield;
 
-    public JPanel innitTab() {
-        urlfield = new JTextField();
-        JLabel label = new JLabel("New Tab");
-        JButton button = new JButton("Test");
-        button.addActionListener(new ActionListener() {
-
-            public void actionPerformed(java.awt.event.ActionEvent e) {
-                // TODO Auto-generated method stub
-
-            }
-
+    public JFXPanel innitTab() {
+    	JFXPanel tab = new JFXPanel();
+        Platform.runLater(new Runnable() {
+        	public void run() {
+        		WebView www = new WebView();
+        		www.getEngine().load("https://limobrowsernewtab.ferder.repl.co/tab/");
+        		tab.setScene(new Scene(www));
+        	}
         });
-        JPanel tab = new JPanel();
-        tab.add(urlfield);
-        tab.add(label);
-        tab.add(button);
-        tab.setBackground(java.awt.Color.BLACK);
-        tab.setBorder(BorderFactory.createLineBorder(java.awt.Color.GREEN, 3));
         return tab;
     }
     

@@ -20,10 +20,10 @@ import javafx.stage.*;
 public class LimoBrowser {
     private JFrame frame;
     private JTabbedPane tabs;
-    private JPanel panel1;
+    private JFXPanel panel1;
     private JFXPanel panel2;
     private JButton button;
-    private JPanel panel;
+    private JFXPanel panel;
 
     public LimoBrowser(String title) {
         frame = new JFrame();
