@@ -18,12 +18,12 @@ import javafx.scene.web.*;
 import javafx.stage.*;
 
 public class LimoBrowser {
-    private JFrame frame;
-    private JTabbedPane tabs;
-    private JFXPanel panel1;
-    private JFXPanel panel2;
-    private JButton button;
-    private JFXPanel panel;
+    public static JFrame frame;
+    public static JTabbedPane tabs;
+    public static JFXPanel panel1;
+    public static JFXPanel panel2;
+    public static JPanel panel3;
+    public static JButton button;
 
     public LimoBrowser(String title) {
         frame = new JFrame();
@@ -32,23 +32,11 @@ public class LimoBrowser {
         frame.getContentPane().setBackground(Color.BLACK);
 
         panel1 = new BrowserTab().innitTab();
-        panel2 = new BrowserTab().googletab();
-
-        button = new JButton();
+        panel3 = new BrowserTab().newtab();
 
         tabs = new JTabbedPane();
         tabs.addTab("Main Tab", panel1);
-        tabs.addTab("Google", panel2);
-        tabs.addTab("+", button);
-        button.addActionListener(new ActionListener() {
-
-            public void actionPerformed(ActionEvent e) {
-                // TODO Auto-generated method stub
-                panel = new BrowserTab().innitTab();
-                tabs.addTab("New Tab", panel);
-            }
-
-        });
+        tabs.addTab("+", panel3);
         tabs.setBackground(Color.BLACK);
         tabs.setBorder(BorderFactory.createEmptyBorder());
 
@@ -56,6 +44,6 @@ public class LimoBrowser {
     }
 
     public static void main(String[] args) {
-        new LimoBrowser("Limo Browser - test v1");
+        new LimoBrowser("Limo Browser by ferderplays");
     }
 }
