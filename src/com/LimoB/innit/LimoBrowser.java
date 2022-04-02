@@ -8,6 +8,9 @@ import java.net.*;
 import java.util.*;
 import javax.swing.*;
 import javax.swing.text.html.*;
+
+import com.LimoB.util.files.FileUtil;
+
 import javafx.application.*;
 import javafx.embed.swing.*;
 import javafx.fxml.*;
@@ -45,5 +48,6 @@ public class LimoBrowser {
 
     public static void main(String[] args) {
         new LimoBrowser("Limo Browser by ferderplays");
+        FileUtil.createAllFiles();
     }
 }

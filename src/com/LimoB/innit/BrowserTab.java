@@ -2,6 +2,7 @@ package com.LimoB.innit;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 
 import javax.swing.*;
@@ -26,7 +27,7 @@ public class BrowserTab {
         Platform.runLater(new Runnable() {
         	public void run() {
         		WebView www = new WebView();
-        		www.getEngine().load("https://limobrowsernewtab.ferder.repl.co/tab/");
+        		www.getEngine().load("https://limobrowsernewtab.ferder.repl.co/");
         		tab.setScene(new Scene(www));
         	}
         });

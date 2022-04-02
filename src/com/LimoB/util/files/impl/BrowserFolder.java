@@ -39,7 +39,24 @@ public class BrowserFolder {
 				System.out.println("Parent file already exists.");
 			}
 		} else if (osname.contains("linux")) {
-			
+			if (!file_linux.exists()) {
+				if (file_linux.mkdir()) {
+					 System.out.println("Parent folder created.");
+					 if (!file2_linux.exists()) {
+						 if (file2_linux.mkdir()) {
+							 System.out.println("Browser folder created.");
+						 } else {
+							 System.out.println("Error found");
+						 }
+					 } else {
+						 System.out.println("Browser folder already exists.");
+					 }
+				} else {
+					System.out.println("Error found");
+				}
+			} else {
+				System.out.println("Parent file already exists.");
+			}
 		}
 	}
 }
