@@ -2,7 +2,6 @@
 IDK what to code, and im bored, so i decided to code a browser
 <br>
 <img src="https://img.shields.io/github/downloads/ferderplays/LimoBrowser/total" alt="dwnlds" />
-<img src="https://img.shields.io/tokei/lines/github/ferderplays/LimoBrowser?color=lightcoral&label=lines%20of%20code" alt="linesofcode" />
 
 # importnant
 If u r about to run it in an IDE, run the "Frame.java" file, cause if u run any other file, it wont work
